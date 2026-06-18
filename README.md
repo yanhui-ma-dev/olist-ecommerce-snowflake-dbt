@@ -18,21 +18,45 @@ An end-to-end data analytics project analyzing customer retention patterns on th
 ## 🔍 Key Findings
 
 **1. Structural retention crisis**
-M1 retention rate is 0.48%, compared to an industry benchmark of 20–40%. Over 96% of customers never make a second purchase.
+M1 retention rate is 0.48%, significantly below typical e-commerce 
+benchmarks (15–30%). Over 96% of customers make no second purchase, 
+indicating the platform operates as a one-time transaction marketplace.
 
 **2. Operational factors do not explain low retention**
 - Delivery timing: on-time (6.63%) vs. late (5.68%) — less than 1% gap
-- Review score: scores 1–5 all cluster between 6.04%–6.88% repeat rate
-- Conclusion: low retention is a platform-level structural issue, not an operational one
+- Review score: scores 1–5 all cluster between 6.04%–6.88%
+- Conclusion: low retention is a structural platform issue, 
+  not an operational one
 
-**3. Category-level opportunity exists, but is limited**
-Even the highest-performing category (eletrodomesticos, 10.47%) remains well below industry benchmarks, confirming the structural nature of the problem.
+**3. Category-level variation exists but remains universally low**
+Repeat purchase rates range from 5.26% (esporte_lazer) to 10.47% 
+(eletrodomesticos) across categories with ≥100 customers. Even the 
+highest-performing category remains well below general e-commerce 
+benchmarks, confirming a platform-wide structural pattern rather than 
+a category-specific issue. The drivers behind category-level variation 
+warrant further investigation.
 
 **4. Actionable recommendations**
-- Build platform-level retention mechanisms (loyalty programme, subscription, personalised re-engagement)
-- Prioritise home appliances and fashion accessories for repeat-purchase pilots — highest relative potential
-- Shift acquisition strategy: current LTV ≈ first-order value; increasing AOV yields more than increasing acquisition volume
+- Investigate why category-level repeat rates vary — qualitative 
+  research or additional behavioural data needed to identify 
+  actionable drivers
+- Build platform-level retention mechanisms (loyalty programme, 
+  personalised re-engagement, subscription options) to address 
+  the structural gap
+- Prioritise categories with relatively higher repeat potential 
+  (home appliances, fashion accessories) for retention pilot programmes
 
+---
+
+## 🔮 Further Work
+
+- **LTV Modelling** — Build a formal LTV model (e.g. BG/NBD) to quantify 
+  the revenue impact of retention improvements and guide investment decisions
+- **Category Driver Analysis** — Investigate what drives repeat purchase 
+  variation across categories using additional behavioural data
+- **Retention Experiment Design** — Design A/B tests to measure causal 
+  impact of retention initiatives before scaling
+  
 ---
 
 ## 🛠️ Tech Stack
@@ -90,4 +114,3 @@ Tableau Public Dashboard
 ## 👤 Author
 
 **Amanda (Yanhui Ma)**
-Operations & Growth Lead | Sydney, Australia
