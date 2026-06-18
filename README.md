@@ -30,8 +30,7 @@ indicating the platform operates as a one-time transaction marketplace.
 
 **3. Category-level variation exists but remains universally low**
 Repeat purchase rates range from 5.26% (esporte_lazer) to 10.47% 
-(eletrodomesticos) across categories with ≥100 customers. Even the 
-highest-performing category remains well below general e-commerce 
+(eletrodomesticos). Even the highest-performing category remains well below general e-commerce 
 benchmarks, confirming a platform-wide structural pattern rather than 
 a category-specific issue. The drivers behind category-level variation 
 warrant further investigation.
