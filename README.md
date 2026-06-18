@@ -4,7 +4,7 @@ An end-to-end data analytics project analyzing customer retention patterns on th
 
 ## 📊 Dashboard
 
-[View Interactive Dashboard on Tableau Public]([[https://public.tableau.com/views/OlistEcommerceCustomerRetentionAnalysis/1_BusinessOverview](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview)
+[View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview)
 
 | Page | Content |
 |------|---------|
