@@ -100,6 +100,8 @@ Intermediate Models (int_)
 ↓
 Mart Models (dim_, fct_, mart_*)
 ↓
+Snowflake Semantic Views (analyses/semantic_views/ — analytics layer for self-serve consumption)
+↓
 Tableau Public Dashboard
 
 ---
