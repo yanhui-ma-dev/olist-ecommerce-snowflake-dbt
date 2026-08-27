@@ -60,6 +60,19 @@ An end-to-end data analytics project analyzing customer retention patterns, oper
 
 ---
 
+## 🔄 Data Pipeline
+Olist Raw Source (PUBLIC Schema)
+       ↓
+Staging Layer (stg_*) — Cleansing, Casting & Date Normalization
+       ↓
+Intermediate Layer (int_*) — Customer Journey & Order Item Aggregations
+       ↓
+Mart Layer (dim_*, fct_*, mart_*) — Star Schema & Cohort Matrices
+       ↓
+BI Consumption Layer (Power BI / Tableau Public)
+
+---
+
 ## 📁 Project Structure
 
 ```text
@@ -76,7 +89,6 @@ olist-ecommerce-snowflake-dbt/
 │       ├── cohort_retention.sql
 │       ├── mart_customer_experience.sql
 │       └── mart_category_retention.sql
-├── power_bi/                         # .pbix report files & DAX documentation
 ├── tests/                            # dbt data quality & referential integrity tests
 ├── analyses/                         # Semantic views & exploratory SQL scripts
 ├── dbt_project.yml
