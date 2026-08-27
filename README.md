@@ -1,117 +1,83 @@
-# Olist E-commerce: Customer Retention Analysis
+# Olist E-commerce: Customer Retention & Strategic Opportunity Analysis
 
-An end-to-end data analytics project analyzing customer retention patterns on the Olist Brazilian e-commerce platform (2016–2018), built with Snowflake, dbt, and Tableau Public.
+An end-to-end data analytics project analyzing customer retention patterns, operational bottlenecks, and category opportunities on the Olist Brazilian e-commerce platform (2016–2018), built with **Snowflake**, **dbt**, **Tableau**, and **Power BI**.
 
-## 📊 Dashboard
+---
 
-[View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview)
+## 📊 Interactive Dashboards
 
-| Page | Content |
-|------|---------|
-| 1. Business Overview | Revenue, orders, AOV, monthly trend, order funnel, geography |
-| 2. Retention Problem | Retention curve (M1: 0.48%), cohort size growth — A Leaky Bucket |
-| 3. Root Cause Analysis | Delivery timing vs. repeat rate, review score vs. repeat rate |
-| 4. Category Opportunity | Repeat purchase rate by product category |
+* **Power BI Service**: [View Interactive Power BI Report](YOUR_POWER_BI_PUBLIC_LINK_HERE)
+* **Tableau Public**: [View Interactive Tableau Dashboard](YOUR_TABLEAU_PUBLIC_LINK_HERE)
+
+### Dashboard Structure
+| Page | Focus Area | Key Business Questions Answered |
+| :--- | :--- | :--- |
+| **1. Executive Overview** | Macro Business Performance | What is the overall revenue scale, seasonality, and geographical concentration? |
+| **2. Customer & Cohort Analysis** | Retention & Repurchase | How severe is customer churn across monthly cohorts (M1 retention: 0.48%)? |
+| **3. Root Cause Analysis** | Operational vs. Structural Hypotheses | Do fulfillment delays or negative reviews drive churn? (Hypothesis Disproven) |
+| **4. Strategic Opportunity** | Supply-Side & Category Matrix | Where are the growth levers across high-repeat categories and interstate supply networks? |
 
 ---
 
 ## 🔍 Key Findings
 
-**1. Structural retention crisis**
-M1 retention rate is 0.48%, significantly below typical e-commerce 
-benchmarks (15–30%). Over 96% of customers make no second purchase, 
-indicating the platform operates as a one-time transaction marketplace.
+* **1. Structural Retention Bottleneck (The "Leaky Bucket")**
+  * **M1 retention sits at 0.48%**, significantly below typical e-commerce benchmarks (15–30%).
+  * **96.88% of customers are single-purchase buyers**, confirming Olist operates fundamentally as a one-time transaction channel rather than a sticky marketplace.
 
-**2. Operational factors do not explain low retention**
-- Delivery timing: on-time (6.63%) vs. late (5.68%) — less than 1% gap
-- Review score: scores 1–5 all cluster between 6.04%–6.88%
-- Conclusion: low retention is a structural platform issue, 
-  not an operational one
+* **2. Operational Factors Do Not Drive Low Retention (Hypothesis Disproven)**
+  * **Fulfillment Timing**: On-time delivery repeat rate (6.40%–6.63%) vs. Late delivery (5.48%–5.68%) shows an insignificant **<1% gap**.
+  * **Review Scores**: 1-star orders (6.48%) exhibit virtually the same repeat purchase rate as 5-star orders (6.76%).
+  * **Strategic Verdict**: Low retention is a **structural business model issue** (durable product mix & platform gateway nature), not an operational execution failure.
 
-**3. Category-level variation exists but remains universally low**
-Repeat purchase rates range from 5.26% (esporte_lazer) to 10.47% 
-(eletrodomesticos). Even the highest-performing category remains well below general e-commerce 
-benchmarks, confirming a platform-wide structural pattern rather than 
-a category-specific issue. The drivers behind category-level variation 
-warrant further investigation.
+* **3. Severe Interstate Supply-Demand Mismatch**
+  * **Supply Monopolization**: Sellers from São Paulo (SP) dominate over **$10.3M+ (60%+)** of total marketplace GMV, fulfilling orders nationwide.
+  * **Fulfillment Root Cause**: Severe delivery lead times (20–30 days) in North/Northeast states (e.g., RR, AP, BA) stem directly from **long-haul interstate transit distances**, not last-mile carrier inefficiency.
 
-**4. Actionable recommendations**
-- Investigate why category-level repeat rates vary — qualitative 
-  research or additional behavioural data needed to identify 
-  actionable drivers
-- Build platform-level retention mechanisms (loyalty programme, 
-  personalised re-engagement, subscription options) to address 
-  the structural gap
-- Prioritise categories with relatively higher repeat potential 
-  (home appliances, fashion accessories) for retention pilot programmes
+* **4. Category Opportunity & Seller Concentration**
+  * **Category Matrix**: Top revenue drivers (`bed_bath_table`, `watches_gifts`) are low-frequency durable goods. In contrast, `health_beauty` (`beleza_saude`) and small appliances (`eletrodomesticos`) combine strong GMV scale with higher repeat rates (up to 15%+).
+  * **Long-Tail Supply**: Top 10 sellers contribute $162K–$253K GMV each, indicating healthy seller diversification without single-merchant dependency risk.
 
 ---
 
-## 🔮 Further Work
+## 💡 Strategic Recommendations
 
-- **LTV Modelling** — Build a formal LTV model (e.g. BG/NBD) to quantify 
-  the revenue impact of retention improvements and guide investment decisions
-- **Category Driver Analysis** — Investigate what drives repeat purchase 
-  variation across categories using additional behavioural data
-- **Retention Experiment Design** — Design A/B tests to measure causal 
-  impact of retention initiatives before scaling
-  
+* **Category Portfolio Rebalancing**: Reallocate high-visibility marketing and homepage real estate to high-frequency consumables (`health_beauty`, daily essentials) to build an organic repurchase flywheel.
+* **Regional Hubs & Local Sourcing**: Establish regional fulfillment nodes/hubs in high-demand Northeast corridors (e.g., Bahia, Pernambuco) and recruit localized sellers to cut cross-country delivery latency.
+* **Platform-Level Retention Mechanics**: Introduce cross-store loyalty rewards, post-purchase subscription bundles for replenishable goods, and warranty add-ons for durable goods.
+
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer | Tool |
-|-------|------|
-| Data Warehouse | Snowflake (AWS Sydney region) |
-| Data Transformation | dbt Cloud |
-| Visualisation | Tableau Public |
-| Version Control | GitHub |
+| Layer | Technology |
+| :--- | :--- |
+| **Data Warehouse** | Snowflake (AWS Sydney Region) |
+| **Data Transformation** | dbt Cloud (Staging $\rightarrow$ Intermediate $\rightarrow$ Marts) |
+| **Business Intelligence** | Power BI Desktop & Service, Tableau Public |
+| **Semantic Modeling** | DAX, Snowflake Semantic Views |
+| **Version Control** | GitHub |
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 olist-ecommerce-snowflake-dbt/
 ├── models/
-│   ├── staging/                      # Raw source cleaning (9 models)
-│   ├── intermediate/                 # Business logic layer
+│   ├── staging/                      # Source data deduplication & type casting (9 models)
+│   ├── intermediate/                 # Intermediate logic & order-customer mapping
 │   │   └── int_customer_orders.sql
-│   └── marts/                        # Final analytical models
+│   └── marts/                        # Star schema dimensions, facts & business marts
 │       ├── dim_customers.sql
 │       ├── dim_products.sql
+│       ├── dim_sellers.sql
 │       ├── fct_orders.sql
 │       ├── cohort_retention.sql
 │       ├── mart_customer_experience.sql
 │       └── mart_category_retention.sql
-├── tests/                            # dbt data quality tests
-├── analyses/                         # Ad hoc SQL analyses
+├── power_bi/                         # .pbix report files & DAX documentation
+├── tests/                            # dbt data quality & referential integrity tests
+├── analyses/                         # Semantic views & exploratory SQL scripts
 ├── dbt_project.yml
 └── README.md
-
----
-
-## 🔄 Data Pipeline
-Olist Raw Data (PUBLIC schema)
-↓
-Staging Models (stg_)
-↓
-Intermediate Models (int_)
-↓
-Mart Models (dim_, fct_, mart_*)
-↓
-Snowflake Semantic Views (analyses/semantic_views/ — analytics layer for self-serve consumption)
-↓
-Tableau Public Dashboard
-
----
-
-## 📋 Data Source
-
-[Olist Brazilian E-commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — 100k orders from 2016 to 2018 across multiple marketplaces in Brazil.
-
----
-
-## 👤 Author
-
-**Amanda (Yanhui Ma)**
