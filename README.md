@@ -296,6 +296,7 @@ Data quality is addressed before the data reaches the BI layer.
 ---
 
 ## 🛠️ Technical Stack
+```text
 
 | Layer | Technology | Purpose |
 | :--- | :--- | :--- |
@@ -308,6 +309,8 @@ Data quality is addressed before the data reaches the BI layer.
 
 ---
 
+## Project Structure
+```text
 olist-ecommerce-snowflake-dbt/
 │
 ├── models/
@@ -344,7 +347,7 @@ olist-ecommerce-snowflake-dbt/
 ---
 
 ## 📌 Project Scope
-
+```text
 | Attribute | Details |
 | :--- | :--- |
 | **Platform** | Olist Brazilian E-commerce Marketplace |
