@@ -75,7 +75,7 @@ Meanwhile:
 
 `beleza_saude` / **Health & Beauty**
 
-shows stronger repeat-purchase potential alongside meaningful GMV scale.
+leads the marketplace by GMV scale, though its repeat-purchase rate sits below the top-performing categories.
 
 **Key takeaway**: Category performance can be evaluated using both **GMV scale and repeat-purchase potential**.
 
