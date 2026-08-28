@@ -292,6 +292,7 @@ Data quality is addressed before the data reaches the BI layer.
         │        Power BI         │
         │         Tableau         │
         └─────────────────────────┘
+```
 
 ---
 
@@ -343,3 +344,15 @@ olist-ecommerce-snowflake-dbt/
 │
 ├── dbt_project.yml
 └── README.md
+```
+
+---
+
+## 📌 Project Scope
+
+| Attribute | Details |
+| :--- | :--- |
+| **Platform** | Olist Brazilian E-commerce Marketplace |
+| **Data Period** | January 2017 – June 2018 |
+| **Analysis** | Retention · Cohorts · Operations · Geography · Categories |
+| **Tools** | Snowflake · dbt · Power BI · Tableau |
