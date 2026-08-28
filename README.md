@@ -16,7 +16,7 @@ The key question is:
 > **Is low retention caused by poor customer experience and operational performance, or is it fundamentally driven by the marketplace’s product mix and customer behaviour?**
 
 This analysis evaluates three areas:
-* **Customer behaviour** — How severe is customer churn and how does retention evolve across cohorts?
+* **Customer behaviour** — How does customer retention evolve across cohorts?
 * **Operational performance** — Do delivery delays and customer reviews influence repeat purchases?
 * **Strategic opportunities** — Which categories, regions, and supply-side patterns could provide stronger growth and retention opportunities?
 
@@ -63,7 +63,7 @@ The evidence suggests that Olist’s low retention is less about operational exe
 The main structural factors identified are:
 * **Durable product mix** $\rightarrow$ Lower natural purchase frequency
 * **One-time transaction behaviour** $\rightarrow$ Customers have limited reasons to return after completing a purchase
-* **Fragmented marketplace experience** $\rightarrow$ Customers may purchase from individual sellers rather than developing strong platform-level loyalty
+* **Marketplace transaction structure** $\rightarrow$ Customers may have limited incentives to return to the platform after completing individual purchases
 * **Long-distance supply network** $\rightarrow$ Heavy dependence on São Paulo sellers creates regional fulfillment inefficiencies
 
 **Strategic conclusion**:
@@ -85,7 +85,7 @@ The objective is to create a higher-frequency purchase cycle rather than relying
 
 ### 2. Strengthen Regional Supply
 Reduce the marketplace’s dependence on long-distance fulfillment by:
-* Establishing regional fulfillment hubs in high-demand Northeast corridors
+* Evaluate regional fulfillment hubs or localized seller recruitment in high-demand Northeast corridors
 * Recruiting more sellers closer to regional demand
 * Improving supply density in underserved states
 
@@ -95,11 +95,9 @@ This could reduce delivery lead times while making regional supply more resilien
 Because customers interact with individual sellers as well as the marketplace itself, Olist could introduce mechanisms that encourage customers to return to the platform, not simply to the same seller.
 
 Potential initiatives include:
-* Cross-store loyalty rewards
-* Replenishment or subscription bundles
-* Post-purchase recommendations
-* Warranty and service add-ons
-* Personalised cross-category recommendations
+* **Cross-store loyalty rewards** to encourage platform-level repeat purchases
+* **Replenishment programmes or subscription bundles** for higher-frequency categories
+* **Personalised cross-category recommendations** to increase customer purchase frequency
 
 The strategic goal is to turn individual transactions into a repeatable customer journey.
 
