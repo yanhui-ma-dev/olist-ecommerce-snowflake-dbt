@@ -1,29 +1,31 @@
 # Olist E-commerce: Customer Retention & Strategic Opportunity Analysis
 
-An end-to-end data analytics project analyzing customer retention patterns, operational bottlenecks, and category opportunities on the Olist Brazilian e-commerce platform (2017/01–2018/06), built with **Snowflake**, **dbt**, **Tableau**, and **Power BI**.
+An end-to-end data analytics project analyzing customer retention patterns, operational bottlenecks, and category opportunities on the Olist Brazilian e-commerce platform (2017/01–2018/06), built with **Snowflake**, **dbt**, **Power BI**, and **Tableau**.
 
 ---
 
-## 📊 Interactive Dashboards
+## 📊 Business Intelligence Dashboards
 
-## Business Intelligence Dashboards (Power BI)
+### Power BI Report
 
-### 1. Executive Overview & Revenue Growth
+#### 1. Executive Overview & Revenue Growth
 ![Executive Overview](images/Executive%20Overview%20%26%20Revenue%20Growth.jpg)
 
-### 2. Customer & Cohort Analysis
+#### 2. Customer & Cohort Analysis
 ![Customer & Cohort Analysis](images/Customer%20%26%20Cohort%20Analysis.jpg)
 
-### 3. Retention Root Cause Analysis
+#### 3. Retention Root Cause Analysis
 ![Retention Root Cause Analysis](images/Retention%20Root%20Cause%20Analysis.jpg)
 
-### 4. Category & Seller Strategy Opportunity
+#### 4. Category & Seller Strategy Opportunity
 ![Category & Seller Strategy Opportunity](images/Category%20%26%20Seller%20Strategy%20Opportunity.jpg)
 
-* **Tableau Public Service**: [View Interactive Tableau Report]([YOUR_POWER_BI_PUBLIC_LINK_HERE](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
+* **Interactive Online Report**: [View Interactive Tableau Dashboard](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-  
+---
+
 ### Dashboard Structure
+
 | Page | Focus Area | Key Business Questions Answered |
 | :--- | :--- | :--- |
 | **1. Executive Overview** | Macro Business Performance | What is the overall revenue scale, seasonality, and geographical concentration? |
@@ -75,6 +77,8 @@ An end-to-end data analytics project analyzing customer retention patterns, oper
 ---
 
 ## 🔄 Data Pipeline
+
+```text
 Olist Raw Source (PUBLIC Schema)
        ↓
 Staging Layer (stg_*) — Cleansing, Casting & Date Normalization
@@ -85,17 +89,12 @@ Mart Layer (dim_*, fct_*, mart_*) — Star Schema & Cohort Matrices
        ↓
 BI Consumption Layer (Power BI / Tableau Public)
 
----
-
-## 📁 Project Structure
-
-```text
 olist-ecommerce-snowflake-dbt/
 ├── models/
-│   ├── staging/                      # Source data deduplication & type casting (9 models)
-│   ├── intermediate/                 # Intermediate logic & order-customer mapping
+│   ├── staging/                       # Source data deduplication & type casting (9 models)
+│   ├── intermediate/                  # Intermediate logic & order-customer mapping
 │   │   └── int_customer_orders.sql
-│   └── marts/                        # Star schema dimensions, facts & business marts
+│   └── marts/                         # Star schema dimensions, facts & business marts
 │       ├── dim_customers.sql
 │       ├── dim_products.sql
 │       ├── dim_sellers.sql
@@ -103,7 +102,7 @@ olist-ecommerce-snowflake-dbt/
 │       ├── cohort_retention.sql
 │       ├── mart_customer_experience.sql
 │       └── mart_category_retention.sql
-├── tests/                            # dbt data quality & referential integrity tests
-├── analyses/                         # Semantic views & exploratory SQL scripts
+├── tests/                             # dbt data quality & referential integrity tests
+├── analyses/                          # Semantic views & exploratory SQL scripts
 ├── dbt_project.yml
 └── README.md
