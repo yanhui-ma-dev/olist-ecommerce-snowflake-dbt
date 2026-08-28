@@ -292,3 +292,62 @@ Data quality is addressed before the data reaches the BI layer.
         │        Power BI         │
         │         Tableau         │
         └─────────────────────────┘
+
+---
+
+## 🛠️ Technical Stack
+
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Data Warehouse** | Snowflake | Cloud data warehouse & analytical SQL |
+| **Transformation** | dbt Cloud | Data transformation, modelling & testing |
+| **BI** | Power BI | Interactive dashboards & DAX |
+| **Visual Analytics** | Tableau Public | Interactive visualisation |
+| **Semantic Modelling** | DAX / Snowflake Semantic Views | Business metrics |
+| **Version Control** | GitHub | Source control & documentation |
+
+---
+
+olist-ecommerce-snowflake-dbt/
+│
+├── models/
+│   ├── staging/
+│   │   └── # Source data cleansing & type casting
+│   │
+│   ├── intermediate/
+│   │   └── int_customer_orders.sql
+│   │
+│   └── marts/
+│       ├── dim_customers.sql
+│       ├── dim_products.sql
+│       ├── dim_sellers.sql
+│       ├── fct_orders.sql
+│       ├── cohort_retention.sql
+│       ├── mart_customer_experience.sql
+│       └── mart_category_retention.sql
+│
+├── tests/
+│   └── # dbt data quality & referential integrity tests
+│
+├── analyses/
+│   └── # Exploratory SQL & analytical scripts
+│
+├── images/
+│   ├── Executive Overview & Revenue Growth.jpg
+│   ├── Customer & Cohort Analysis.jpg
+│   ├── Retention Root Cause Analysis.jpg
+│   └── Category & Seller Strategy Opportunity.jpg
+│
+├── dbt_project.yml
+└── README.md
+
+---
+
+## 📌 Project Scope
+
+| Attribute | Details |
+| :--- | :--- |
+| **Platform** | Olist Brazilian E-commerce Marketplace |
+| **Data Period** | January 2017 – June 2018 |
+| **Analysis** | Retention · Cohorts · Operations · Geography · Categories |
+| **Tools** | Snowflake · dbt · Power BI · Tableau |
