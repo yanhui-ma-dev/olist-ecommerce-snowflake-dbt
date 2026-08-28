@@ -1,12 +1,12 @@
 # Olist E-commerce: Customer Retention & Strategic Opportunity Analysis
 
-An end-to-end data analytics project analyzing customer retention patterns, operational bottlenecks, and category opportunities on the Olist Brazilian e-commerce platform (2016–2018), built with **Snowflake**, **dbt**, **Tableau**, and **Power BI**.
+An end-to-end data analytics project analyzing customer retention patterns, operational bottlenecks, and category opportunities on the Olist Brazilian e-commerce platform (2017/01–2018/06), built with **Snowflake**, **dbt**, **Tableau**, and **Power BI**.
 
 ---
 
 ## 📊 Interactive Dashboards
 
-* **Power BI Service**: [View Interactive Power BI Report](YOUR_POWER_BI_PUBLIC_LINK_HERE)
+* **Power BI Service**: [View Interactive Power BI Report]([YOUR_POWER_BI_PUBLIC_LINK_HERE](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
 ## Business Intelligence Dashboards (Power BI)
 
 ### 1. Executive Overview & Revenue Growth
