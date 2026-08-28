@@ -1,108 +1,262 @@
 # Olist E-commerce: Customer Retention & Strategic Opportunity Analysis
 
-An end-to-end data analytics project analyzing customer retention patterns, operational bottlenecks, and category opportunities on the Olist Brazilian e-commerce platform (2017/01–2018/06), built with **Snowflake**, **dbt**, **Power BI**, and **Tableau**.
+**Why are customers not coming back — and where should Olist invest to improve retention?**
+
+An end-to-end e-commerce analytics project investigating customer retention, operational performance, supply network concentration, and category growth opportunities on the Olist Brazilian marketplace.
+
+The analysis moves from **business problem → key findings → root cause → actionable insights**, using customer cohort analysis, retention segmentation, delivery performance, review scores, geographic patterns, and category-level analysis.
+
+---
+
+## 🎯 Business Problem
+
+Olist’s marketplace shows extremely low customer retention.
+
+The key question is:
+> **Is low retention caused by poor customer experience and operational performance, or is it fundamentally driven by the marketplace’s product mix and customer behaviour?**
+
+This analysis evaluates three areas:
+* **Customer behaviour** — How severe is customer churn and how does retention evolve across cohorts?
+* **Operational performance** — Do delivery delays and customer reviews influence repeat purchases?
+* **Strategic opportunities** — Which categories, regions, and supply-side patterns could provide stronger growth and retention opportunities?
+
+---
+
+## 🔑 Key Findings
+
+### 1. Retention is a structural bottleneck
+Olist has a highly transactional customer base:
+* **M1 retention: 0.48%**
+* **96.88% of customers are single-purchase buyers**
+
+The consistently low repeat-purchase behaviour suggests that retention is not simply an isolated customer-experience problem, but a broader characteristic of the marketplace’s business model and product mix.
+
+### 2. Operational performance does not explain the retention gap
+The analysis tested whether delivery performance and customer satisfaction were major drivers of repeat purchases.
+
+The results showed only marginal differences:
+* **On-time delivery**: 6.40%–6.63% repeat purchase rate
+* **Late delivery**: 5.48%–5.68%
+* **1-star reviews**: 6.48%
+* **5-star reviews**: 6.76%
+
+The evidence therefore does not support delivery performance or review scores as the primary explanation for Olist’s low retention.
+
+### 3. The marketplace has a significant interstate supply imbalance
+* Sellers based in São Paulo (SP) generate more than **$10.3M GMV**, representing **over 60%** of marketplace GMV.
+* This creates substantial dependence on long-distance interstate fulfillment.
+* North and Northeast states such as Roraima (RR), Amapá (AP), and Bahia (BA) experience substantially longer delivery lead times, consistent with the impact of long-haul interstate transportation.
+
+### 4. Category mix provides a more promising retention opportunity
+* Olist’s largest revenue categories are not necessarily its strongest retention opportunities.
+* Categories such as `bed_bath_table` and `watches_gifts` generate significant GMV but are largely durable, low-frequency purchases.
+* By comparison, categories such as **Health & Beauty (`beleza_saude`)** demonstrate stronger repeat-purchase potential while maintaining meaningful GMV scale.
+
+This indicates an opportunity to optimise the category portfolio not only for revenue, but also for customer repurchase potential.
+
+---
+
+## 🎯 Root Cause
+
+The evidence suggests that Olist’s low retention is less about operational execution and more about the underlying marketplace structure.
+
+The main structural factors identified are:
+* **Durable product mix** $\rightarrow$ Lower natural purchase frequency
+* **One-time transaction behaviour** $\rightarrow$ Customers have limited reasons to return after completing a purchase
+* **Fragmented marketplace experience** $\rightarrow$ Customers may purchase from individual sellers rather than developing strong platform-level loyalty
+* **Long-distance supply network** $\rightarrow$ Heavy dependence on São Paulo sellers creates regional fulfillment inefficiencies
+
+**Strategic conclusion**:
+Improving delivery speed alone is unlikely to solve Olist’s core retention problem. The stronger opportunity is to increase the frequency of customer interactions with the marketplace while improving the supply structure in high-demand regions.
+
+---
+
+## 💡 Actionable Insights
+
+Based on the analysis, three strategic directions emerge:
+
+### 1. Rebalance Category Investment
+Increase marketing visibility and homepage exposure for higher-frequency and replenishable categories such as:
+* Health & Beauty
+* Daily essentials
+* Other categories with stronger repeat-purchase potential
+
+The objective is to create a higher-frequency purchase cycle rather than relying primarily on durable, one-time purchases.
+
+### 2. Strengthen Regional Supply
+Reduce the marketplace’s dependence on long-distance fulfillment by:
+* Establishing regional fulfillment hubs in high-demand Northeast corridors
+* Recruiting more sellers closer to regional demand
+* Improving supply density in underserved states
+
+This could reduce delivery lead times while making regional supply more resilient.
+
+### 3. Build Platform-Level Retention Mechanics
+Because customers interact with individual sellers as well as the marketplace itself, Olist could introduce mechanisms that encourage customers to return to the platform, not simply to the same seller.
+
+Potential initiatives include:
+* Cross-store loyalty rewards
+* Replenishment or subscription bundles
+* Post-purchase recommendations
+* Warranty and service add-ons
+* Personalised cross-category recommendations
+
+The strategic goal is to turn individual transactions into a repeatable customer journey.
 
 ---
 
 ## 📊 Business Intelligence Dashboards
 
-### Power BI Report
+The analysis is translated into four decision-oriented dashboards, moving from business performance → customer behaviour → root-cause validation → strategic opportunity.
 
-#### 1. Executive Overview & Revenue Growth
+### 1. Executive Overview & Revenue Growth
 ![Executive Overview](images/Executive%20Overview%20%26%20Revenue%20Growth.jpg)
 
-#### 2. Customer & Cohort Analysis
+**Business question**:
+How is the marketplace performing, and where is revenue concentrated?
+
+**Focus areas**:
+* Overall GMV and order performance
+* Revenue trends and seasonality
+* Geographic distribution
+* Marketplace scale and concentration
+
+---
+
+### 2. Customer & Cohort Analysis
 ![Customer & Cohort Analysis](images/Customer%20%26%20Cohort%20Analysis.jpg)
 
-#### 3. Retention Root Cause Analysis
+**Business question**:
+How quickly do customers churn, and how does retention evolve across cohorts?
+
+**Focus areas**:
+* Monthly customer cohorts
+* M1 retention
+* Repeat-purchase behaviour
+* One-time vs. repeat customers
+* Customer retention trends
+
+**Key finding**:
+M1 retention is only **0.48%**, with **96.88%** of customers making a single purchase.
+
+---
+
+### 3. Retention Root Cause Analysis
 ![Retention Root Cause Analysis](images/Retention%20Root%20Cause%20Analysis.jpg)
 
-#### 4. Category & Seller Strategy Opportunity
+**Business question**:
+Are delivery performance and customer satisfaction driving repeat purchase?
+
+The dashboard compares repeat-purchase behaviour across:
+* Delivery timeliness
+* Review scores
+* Customer experience indicators
+
+**Key finding**:
+The analysis does not support delivery delays or review scores as the primary drivers of low retention. This shifts the strategic focus from purely operational improvement toward customer frequency, category mix, and platform-level retention.
+
+---
+
+### 4. Category & Seller Strategy Opportunity
 ![Category & Seller Strategy Opportunity](images/Category%20%26%20Seller%20Strategy%20Opportunity.jpg)
 
-* **Interactive Online Report**: [View Interactive Tableau Dashboard](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+**Business question**:
+Which categories and supply-side patterns offer the strongest strategic opportunities?
+
+**Focus areas**:
+* Category GMV vs. repeat-purchase rate
+* Category-level retention opportunity
+* Seller GMV concentration
+* Regional supply patterns
+* Interstate fulfillment exposure
 
 ---
 
-### Dashboard Structure
+### Interactive Dashboard
 
-| Page | Focus Area | Key Business Questions Answered |
-| :--- | :--- | :--- |
-| **1. Executive Overview** | Macro Business Performance | What is the overall revenue scale, seasonality, and geographical concentration? |
-| **2. Customer & Cohort Analysis** | Retention & Repurchase | How severe is customer churn across monthly cohorts (M1 retention: 0.48%)? |
-| **3. Root Cause Analysis** | Operational vs. Structural Hypotheses | Do fulfillment delays or negative reviews drive churn? (Hypothesis Disproven) |
-| **4. Strategic Opportunity** | Supply-Side & Category Matrix | Where are the growth levers across high-repeat categories and interstate supply networks? |
+* **Tableau Public**: [View Interactive Tableau Dashboard](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
 
-## 🔍 Key Findings
+## 🔍 Evidence Behind the Findings
 
-* **1. Structural Retention Bottleneck (The "Leaky Bucket")**
-  * **M1 retention sits at 0.48%**, significantly below typical e-commerce benchmarks (15–30%).
-  * **96.88% of customers are single-purchase buyers**, confirming Olist operates fundamentally as a one-time transaction channel rather than a sticky marketplace.
+### Customer Retention
+Customer-level and cohort analysis reveals a fundamental retention challenge.
 
-* **2. Operational Factors Do Not Drive Low Retention (Hypothesis Disproven)**
-  * **Fulfillment Timing**: On-time delivery repeat rate (6.40%–6.63%) vs. Late delivery (5.48%–5.68%) shows an insignificant **<1% gap**.
-  * **Review Scores**: 1-star orders (6.48%) exhibit virtually the same repeat purchase rate as 5-star orders (6.76%).
-  * **Strategic Verdict**: Low retention is a **structural business model issue** (durable product mix & platform gateway nature), not an operational execution failure.
-
-* **3. Severe Interstate Supply-Demand Mismatch**
-  * **Supply Monopolization**: Sellers from São Paulo (SP) dominate over **$10.3M+ (60%+)** of total marketplace GMV, fulfilling orders nationwide.
-  * **Fulfillment Root Cause**: Severe delivery lead times (20–30 days) in North/Northeast states (e.g., RR, AP, BA) stem directly from **long-haul interstate transit distances**, not last-mile carrier inefficiency.
-
-* **4. Category Opportunity & Seller Concentration**
-  * **Category Matrix**: Top revenue drivers (`bed_bath_table`, `watches_gifts`) are low-frequency durable goods. In contrast, `health_beauty` (`beleza_saude`) and small appliances (`eletrodomesticos`) combine strong GMV scale with higher repeat rates (up to 15%+).
-  * **Long-Tail Supply**: Top 10 sellers contribute $162K–$253K GMV each, indicating healthy seller diversification without single-merchant dependency risk.
-
----
-
-## 💡 Strategic Recommendations
-
-* **Category Portfolio Rebalancing**: Reallocate high-visibility marketing and homepage real estate to high-frequency consumables (`health_beauty`, daily essentials) to build an organic repurchase flywheel.
-* **Regional Hubs & Local Sourcing**: Establish regional fulfillment nodes/hubs in high-demand Northeast corridors (e.g., Bahia, Pernambuco) and recruit localized sellers to cut cross-country delivery latency.
-* **Platform-Level Retention Mechanics**: Introduce cross-store loyalty rewards, post-purchase subscription bundles for replenishable goods, and warranty add-ons for durable goods.
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
+| Metric | Result |
 | :--- | :--- |
-| **Data Warehouse** | Snowflake (AWS Sydney Region) |
-| **Data Transformation** | dbt Cloud (Staging $\rightarrow$ Intermediate $\rightarrow$ Marts) |
-| **Business Intelligence** | Power BI Desktop & Service, Tableau Public |
-| **Semantic Modeling** | DAX, Snowflake Semantic Views |
-| **Version Control** | GitHub |
+| **M1 Retention** | 0.48% |
+| **Single-purchase customers** | 96.88% |
+| **Repeat-purchase customers** | 3.12% |
+
+The scale of one-time purchasing suggests that increasing customer frequency is a more fundamental challenge than simply improving individual transactions.
 
 ---
 
-## 🔄 Data Pipeline
+### Operational Hypothesis Testing
+To determine whether operational performance was responsible for low retention, repeat-purchase behaviour was segmented by delivery performance and review score.
+
+| Factor | Segment | Repeat Purchase Rate |
+| :--- | :--- | :--- |
+| **Delivery** | On-time | 6.40%–6.63% |
+| **Delivery** | Late | 5.48%–5.68% |
+| **Review** | 1-star | 6.48% |
+| **Review** | 5-star | 6.76% |
+
+The differences are relatively small.
+
+**Conclusion**:
+The analysis does not provide strong evidence that delivery performance or review scores are the primary causes of low retention. This hypothesis-testing step prevents the analysis from defaulting to an intuitive but unsupported recommendation such as simply “improve delivery”.
+
+---
+
+### Geographic Supply & Fulfillment
+* São Paulo sellers account for **more than $10.3M GMV** and **over 60%** of marketplace GMV.
+* This concentration creates a structural supply pattern in which products are frequently shipped across large geographic distances.
+* North and Northeast states such as RR, AP, and BA show substantially longer delivery lead times.
+
+The geographic pattern indicates that fulfillment delays are strongly associated with interstate distance and supply concentration, rather than being solely a last-mile delivery issue.
+
+---
+
+### Category Opportunity
+The category analysis compares GMV scale and repeat-purchase behaviour to identify potential growth opportunities.
+
+High-revenue categories such as:
+* `bed_bath_table`
+* `watches_gifts`
+
+are largely durable and lower-frequency.
+
+Meanwhile, categories such as:
+* `beleza_saude` / Health & Beauty
+* selected appliance categories
+
+show stronger repeat-purchase potential.
+
+**Strategic implication**:
+Revenue scale and retention potential should be evaluated together when allocating category investment. The objective is not simply to maximise current GMV, but to identify categories capable of generating more frequent customer interactions and repeat purchases.
+
+---
+
+## 🏗️ Data & Analytics Architecture
+
+The project uses a layered analytics architecture to separate raw data preparation, reusable analytical logic, business modelling, and BI consumption.
 
 ```text
-Olist Raw Source (PUBLIC Schema)
+Olist Raw Data
        ↓
-Staging Layer (stg_*) — Cleansing, Casting & Date Normalization
+Staging Layer
+Cleaning · Casting · Standardisation
        ↓
-Intermediate Layer (int_*) — Customer Journey & Order Item Aggregations
+Intermediate Layer
+Customer Journey · Order-Level Aggregation
        ↓
-Mart Layer (dim_*, fct_*, mart_*) — Star Schema & Cohort Matrices
+Mart Layer
+Customer · Product · Seller · Order · Retention
        ↓
-BI Consumption Layer (Power BI / Tableau Public)
-
-olist-ecommerce-snowflake-dbt/
-├── models/
-│   ├── staging/                       # Source data deduplication & type casting (9 models)
-│   ├── intermediate/                  # Intermediate logic & order-customer mapping
-│   │   └── int_customer_orders.sql
-│   └── marts/                         # Star schema dimensions, facts & business marts
-│       ├── dim_customers.sql
-│       ├── dim_products.sql
-│       ├── dim_sellers.sql
-│       ├── fct_orders.sql
-│       ├── cohort_retention.sql
-│       ├── mart_customer_experience.sql
-│       └── mart_category_retention.sql
-├── tests/                             # dbt data quality & referential integrity tests
-├── analyses/                          # Semantic views & exploratory SQL scripts
-├── dbt_project.yml
-└── README.md
+Business Analytics
+Cohort · Retention · Experience · Category
+       ↓
+BI Consumption
+Power BI · Tableau
