@@ -6,7 +6,6 @@ An end-to-end data analytics project analyzing customer retention patterns, oper
 
 ## 📊 Interactive Dashboards
 
-* **Power BI Service**: [View Interactive Power BI Report]([YOUR_POWER_BI_PUBLIC_LINK_HERE](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
 ## Business Intelligence Dashboards (Power BI)
 
 ### 1. Executive Overview & Revenue Growth
@@ -21,6 +20,9 @@ An end-to-end data analytics project analyzing customer retention patterns, oper
 ### 4. Category & Seller Strategy Opportunity
 ![Category & Seller Strategy Opportunity](images/Category%20%26%20Seller%20Strategy%20Opportunity.jpg)
 
+* **Tableau Public Service**: [View Interactive Tableau Report]([YOUR_POWER_BI_PUBLIC_LINK_HERE](https://public.tableau.com/views/OlistEcommerceAnalysis_17817774946480/1_BusinessOverview?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
+
+  
 ### Dashboard Structure
 | Page | Focus Area | Key Business Questions Answered |
 | :--- | :--- | :--- |
