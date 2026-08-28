@@ -85,9 +85,9 @@ The objective is to create a higher-frequency purchase cycle rather than relying
 
 ### 2. Strengthen Regional Supply
 Reduce the marketplace’s dependence on long-distance fulfillment by:
-* Evaluate regional fulfillment hubs or localized seller recruitment in high-demand Northeast corridors
-* Recruiting more sellers closer to regional demand
-* Improving supply density in underserved states
+* **Evaluating regional fulfillment hubs** in high-demand Northeast corridors
+* **Recruiting more sellers closer to regional demand**
+* **Improving supply density** in underserved states
 
 This could reduce delivery lead times while making regional supply more resilient.
 
@@ -110,7 +110,7 @@ The analysis is translated into four decision-oriented dashboards, moving from b
 ### 1. Executive Overview & Revenue Growth
 ![Executive Overview](images/Executive%20Overview%20%26%20Revenue%20Growth.jpg)
 
-**Business question**:
+**Business question:**  
 How is the marketplace performing, and where is revenue concentrated?
 
 **Focus areas**:
@@ -124,8 +124,8 @@ How is the marketplace performing, and where is revenue concentrated?
 ### 2. Customer & Cohort Analysis
 ![Customer & Cohort Analysis](images/Customer%20%26%20Cohort%20Analysis.jpg)
 
-**Business question**:
-How quickly do customers churn, and how does retention evolve across cohorts?
+**Business question:**  
+How does customer retention evolve across cohorts?
 
 **Focus areas**:
 * Monthly customer cohorts
@@ -142,7 +142,7 @@ M1 retention is only **0.48%**, with **96.88%** of customers making a single pur
 ### 3. Retention Root Cause Analysis
 ![Retention Root Cause Analysis](images/Retention%20Root%20Cause%20Analysis.jpg)
 
-**Business question**:
+**Business question:**  
 Are delivery performance and customer satisfaction driving repeat purchase?
 
 The dashboard compares repeat-purchase behaviour across:
@@ -158,7 +158,7 @@ The analysis does not support delivery delays or review scores as the primary dr
 ### 4. Category & Seller Strategy Opportunity
 ![Category & Seller Strategy Opportunity](images/Category%20%26%20Seller%20Strategy%20Opportunity.jpg)
 
-**Business question**:
+**Business question:**  
 Which categories and supply-side patterns offer the strongest strategic opportunities?
 
 **Focus areas**:
@@ -258,3 +258,39 @@ Cohort · Retention · Experience · Category
        ↓
 BI Consumption
 Power BI · Tableau
+
+---
+
+## Project Structure
+olist-ecommerce-snowflake-dbt/
+│
+├── models/
+│   ├── staging/
+│   │   └── # Source data cleansing & type casting
+│   │
+│   ├── intermediate/
+│   │   └── int_customer_orders.sql
+│   │
+│   └── marts/
+│       ├── dim_customers.sql
+│       ├── dim_products.sql
+│       ├── dim_sellers.sql
+│       ├── fct_orders.sql
+│       ├── cohort_retention.sql
+│       ├── mart_customer_experience.sql
+│       └── mart_category_retention.sql
+│
+├── tests/
+│   └── # dbt data quality & referential integrity tests
+│
+├── analyses/
+│   └── # Exploratory SQL & analytical scripts
+│
+├── images/
+│   ├── Executive Overview & Revenue Growth.jpg
+│   ├── Customer & Cohort Analysis.jpg
+│   ├── Retention Root Cause Analysis.jpg
+│   └── Category & Seller Strategy Opportunity.jpg
+│
+├── dbt_project.yml
+└── README.md
