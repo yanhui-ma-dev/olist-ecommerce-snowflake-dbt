@@ -7,7 +7,19 @@ An end-to-end data analytics project analyzing customer retention patterns, oper
 ## 📊 Interactive Dashboards
 
 * **Power BI Service**: [View Interactive Power BI Report](YOUR_POWER_BI_PUBLIC_LINK_HERE)
-* **Tableau Public**: [View Interactive Tableau Dashboard](YOUR_TABLEAU_PUBLIC_LINK_HERE)
+## Business Intelligence Dashboards (Power BI)
+
+### 1. Executive Overview & Revenue Growth
+![Executive Overview](images/Executive%20Overview%20%26%20Revenue%20Growth.jpg)
+
+### 2. Customer & Cohort Analysis
+![Customer & Cohort Analysis](images/Customer%20%26%20Cohort%20Analysis.jpg)
+
+### 3. Retention Root Cause Analysis
+![Retention Root Cause Analysis](images/Retention%20Root%20Cause%20Analysis.jpg)
+
+### 4. Category & Seller Strategy Opportunity
+![Category & Seller Strategy Opportunity](images/Category%20%26%20Seller%20Strategy%20Opportunity.jpg)
 
 ### Dashboard Structure
 | Page | Focus Area | Key Business Questions Answered |
