@@ -261,7 +261,9 @@ Power BI · Tableau
 
 ---
 
-## Project Structure
+## 📁 Project Structure
+
+```text
 olist-ecommerce-snowflake-dbt/
 │
 ├── models/
